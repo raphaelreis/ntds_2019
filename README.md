@@ -5,7 +5,8 @@
 [binder]: https://mybinder.org/v2/gh/mdeff/ntds_2019/outputs?urlpath=lab
 
 This repository contains the material for the practical work associated with the EPFL master course [EE-558 A Network Tour of Data Science][epfl] ([moodle]), taught in fall 2019.
-The content is similar to the [2017] and [2018] editions.
+The content is similar to the [2017] and [2018] editions, with more emphasis on machine learning with graphs.
+Compared to the [2016 edition], the course has been refocused on graph and network sciences.
 The course is divided in two parts: Network Science and Learning with Graphs.
 The material revolves around the following topics:
 
@@ -26,6 +27,7 @@ Below are slides about the organization of the course.
 
 [epfl]: https://edu.epfl.ch/coursebook/en/a-network-tour-of-data-science-EE-558
 [moodle]: https://moodle.epfl.ch/course/view.php?id=15299
+[2016 edition]: https://github.com/mdeff/ntds_2016
 [2017]: https://github.com/mdeff/ntds_2017
 [2018]: https://github.com/mdeff/ntds_2018
 
@@ -38,8 +40,8 @@ Below is the teaching material you'll find in this repository (tentative).
 
 1. [Installation instructions](#installation)
 1. [Introduction][t01]
-1. Building graphs from edge lists
-1. Building graphs from features
+1. [Building graphs from edge lists][t02]
+1. [Building graphs from features][t03]
 1. Plotting with matplotlib
 1. Interactive graph visualization with gephi
 1. Sparse matrices with scipy
@@ -48,6 +50,8 @@ Below is the teaching material you'll find in this repository (tentative).
 1. Learning on graphs with pytorch
 
 [t01]: https://nbviewer.jupyter.org/github/mdeff/ntds_2019/blob/outputs/tutorials/01_introduction.ipynb
+[t02]: https://nbviewer.jupyter.org/github/mdeff/ntds_2019/blob/outputs/tutorials/02_graph_from_edge_list.ipynb
+[t03]: https://nbviewer.jupyter.org/github/mdeff/ntds_2019/blob/outputs/tutorials/03_graph_from_features.ipynb
 
 For this course, you'll use the following tools:
 [conda] & [anaconda], [python], [jupyter], [git], [numpy], [scipy], [matplotlib], [pandas], [networkx], [graph-tool], [pygsp], [gephi], [scikit-learn], [pytorch].
@@ -73,8 +77,10 @@ For this course, you'll use the following tools:
 The following assignments were designed to evaluate the theoretical understanding of students through practice.
 As a Data Science course, those activities are realized on real data and networks.
 
-1. Network science: assignment, solution, feedback.
+1. Network science: [assignment][a1q], solution, feedback.
 1. Learning with graphs: assignment, solution, feedback.
+
+[a1q]: https://nbviewer.jupyter.org/github/mdeff/ntds_2019/blob/outputs/assignments/1_network_science.ipynb
 
 ## Projects
 
@@ -111,7 +117,7 @@ Follow the below instructions to install it and create an environment for the co
 1. Download this repository with `git clone https://github.com/mdeff/ntds_2019`.
 1. Enter the repository with `cd ntds_2019`.
 1. Create an environment with the packages required for the course with `conda env create -f environment.yml`.
-1. Run the steps below to start Jupyter. If everything went fine, you should now be able to run the [`test_install.ipynb`][test_install] notebook.
+1. Run the steps below to start Jupyter. You should be able to run the [`test_install.ipynb`][test_install] notebook.
 
 [test_install]: https://nbviewer.jupyter.org/github/mdeff/ntds_2019/blob/outputs/test_install.ipynb
 
