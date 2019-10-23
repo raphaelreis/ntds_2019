@@ -80,13 +80,15 @@ The following assignments were designed to evaluate the theoretical understandin
 As a Data Science course, those activities are realized on real data and networks.
 
 1. Network science: [assignment][a1q], solution, feedback.
-1. Learning with graphs: assignment, solution, feedback.
+1. Learning with graphs: [assignment][a2q], solution, feedback.
 
 [a1q]: https://nbviewer.jupyter.org/github/mdeff/ntds_2019/blob/outputs/assignments/1_network_science.ipynb
+[a2q]: https://nbviewer.jupyter.org/github/mdeff/ntds_2019/blob/outputs/assignments/2_learning_with_graphs.ipynb
 
 ## Projects
 
 Part of the course is evaluated by an open-ended project (see the [description][projects]), proposed and carried out by groups of four students.
+We provide a list of [datasets and project ideas](projects).
 Those data projects are meant to jointly practice and evaluate their theoretical network analysis skills and practical Data Science skills.
 Below is the work of the 150 students enrolled that year.
 
