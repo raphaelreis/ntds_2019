@@ -1,3 +1,6 @@
+from sklearn.pipeline import Pipeline
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import GridSearchCV
 from sklearn.datasets import fetch_openml
 import numpy as np
 
@@ -33,3 +36,32 @@ def load_mnist():
     labels = np.array(labels)
 
     return _subsample_mnist(images, labels, n)
+
+
+def logistic_grid_search(train_features, train_labels):
+    # Create first pipeline for base without reducing features.
+
+    pipe = Pipeline([('classifier' , RandomForestClassifier())])
+    # pipe = Pipeline([('classifier', RandomForestClassifier())])
+
+    # Create param grid.
+
+    param_grid = [
+        {'classifier' : [LogisticRegression()],
+         'classifier__penalty' : ['l1', 'l2'],
+        'classifier__C' : np.logspace(-4, 4, 20),
+        'classifier__solver' : ['liblinear']},
+    #     {'classifier' : [RandomForestClassifier()],
+    #     'classifier__n_estimators' : list(range(10,101,10)),
+    #     'classifier__max_features' : list(range(6,32,5))}
+    ]
+
+    # Create grid search object
+
+    clf = GridSearchCV(pipe, param_grid = param_grid, cv = 5, verbose=True, n_jobs=-1)
+
+    # Fit on data
+
+    best_clf = clf.fit(train_features, train_labels.numpy())
+    
+    return best_clf
